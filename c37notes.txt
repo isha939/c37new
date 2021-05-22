@@ -1,0 +1,62 @@
+Great! We had also discussed the importance of structuring our code. Structuring the code helps us write better code. 
+ 
+It is much like organizing your room. If your room is disorganized, you wouldn't be able to find where you have kept your stuff. 
+ 
+It will also be difficult to decide where to keep new stuff in your room. 
+ 
+Similarly, a poorly organized code would make it difficult to find bugs in your code. 
+ 
+ 
+ 
+ 
+It takes some time to think about how to structure your code, but all the time spent on making your code clean, structured and more readable is always worth it! 
+ In today's class, we write a code to make the game start as soon as the registered players reach four. 
+ 
+ Let’s create one more class called Player class. 
+ 
+A new player object should be created every time a new user logs in. It should contain all the information about the player - name and position in the game, etc.  
+ 
+For now, it can just have the name property. It should also be able to read and write player information to the database - for example, player count or player name. 
+
+We need to write a function getCount()​ to get the playerCount and​ updateCount()​ to update the playerCount in the database. 
+  do you remember how we can update the data in Game class? 
+ 
+The update method is used to update the values. 
+
+Similarly, in object-oriented programming language, we need to create an object to execute a method.  
+ 
+When the user needs to create an object in a way so that whenever the class object is created, a few sets of statements get executed automatically, then in such cases, they can use constructors. 
+ 
+Let’s define all the properties of the Form - input, button, greeting element inside the constructor of the class. 
+The input, button and greeting inside the mousePressed() function has to be changed to this.input, this.button and this.greeting. 
+
+this ​is a reference variable that refers to the current object. Consider you are inside your home. When you want to point to a chair, you will mention it as this chair.
+Exactly! "​this​" refers to the object which is calling the function. We want 'this' ​inside the mousePressed function to refer to the Form object. 
+ 
+However, the button element is calling the function ​mousePressed()​ and 'this' ​refers to the button element here.
+But this is not what we want. We want 'this' ​to continue to refer to the form object. We can use arrow functions here. With an arrow function, ​this represents the ​owner ​ of the function. 
+ Here ​mousePressed()​ is called inside the display function, which is called by the form object. ​()=>​ Arrow function ensures that ​'this' ​remains bound to the form object.
+
+Let's move to the Game Class. 
+ Let's write a ​play()​ function which will be called when the game state reaches play state or 1. 
+ Inside the ​play()​ function, hide the Form and display the text message that the game has started. 
+ Whenever we read data from a database, we receive data as a datasnapshot. We can either use on() or once() function.​ To read the value once, call the once method on a reference. 
+
+once()​ is an asynchronous listener that will get the ​playerCount ​data only once and then execute getCount()​ to set up a permanent listener. 
+ 
+We have a normal function to return 1 and an async keyword used before a function. This is a special syntax that works with promises i.e async/await. 
+A promise in JavaScript is similar to a promise in real life. When we make a promise in real life, it is a guarantee that we are going to do something in the future. 
+ 
+JavaScript also has something called as promises. When we define a promise in JavaScript, it will be resolved when the time comes, or it will get rejected. 
+A Promise is in one of these states: 
+● pending: initial state, neither fulfilled nor rejected; 
+● fulfilled: meaning that the operation was completed successfully; and 
+● rejected: meaning that the operation failed. 
+
+When we ​await​ a promise, the function is paused in a non-blocking way until the promise settles.  i.e the asynchronous function will wait for the playerCount value and only then the form will be created and displayed
+ 
+ 
+ 
+ 
+ 
+ 
